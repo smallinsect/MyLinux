@@ -1,0 +1,21 @@
+
+第一章 Shell简介
+
+什么是Shell
+    Shell是核心程序（kernel）之外的指令解析器，是一个程序，同时是一种命令语言和程序设计语言
+    Shell的类型ash、bash、ksh、csh、tcsh
+        -cat /etc/Shell  查看当前系统有什么shell
+        -echo $SHELL 查看当前系统使用什么shell
+        bash 记录使用的命令 自动查看命令
+    程序在Shell中运行
+    Shell中可运行子Shell
+
+存取权限和安全
+    文件和目录的权限（-rwxr--r--） -普通文件 d目录文件 l链接文件 b快速文件 c字符式的文件 p命名管道文件 s表示socket文件
+    setuid(suid/guid)(chmod u+s,g+s file)
+    chown和chgrp(chown user file / chgrp group file)
+    umask(umask nnn)
+    符号链接(ln [-s] source_path targer_path)
+Shell简单脚本
+Shell特性
+
