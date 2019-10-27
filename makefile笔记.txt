@@ -1,0 +1,62 @@
+mikefile从小下往上执行
+
+main: main.c tool.o
+	gcc main.c too.o -o main
+
+tool.o: tool.c
+	gcc -c tool.c
+
+clean:
+	rm *.o main
+
+执行makefile
+直接打make
+
+清除文件
+make clean
+
+
+
+main: main.c tool.o bar.o
+	gcc main.c tool.o bar.o -o main
+
+tool.o: tool.c
+	gcc -c tool.c
+
+bar.o: bar.c
+	gcc -c bar.c
+
+clean:
+	rm *.o main
+
+将gcc改成变量的形式
+
+CC = gcc
+CFLAGS = -lm -Wall -g
+
+main: main.c tool.o bar.o
+	$(CC) $(CFLAGS) main.c tool.o bar.o -o main
+
+tool.o: tool.c
+	$(CC) $(CFLAGS) -c tool.c
+
+bar.o: bar.c
+	$(CC) $(CFLAGS) -c bar.c
+
+clean:
+	rm *.o main
+
+编译多个可执行文件
+
+CC = gcc
+all: main_max main_min
+
+main_max: main_max.c
+	$(CC) main_max.c -o main_max
+
+main_min: main_min.c
+	$(CC) main_min.c -o main_min
+
+
+
+
