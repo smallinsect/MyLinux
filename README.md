@@ -1,22 +1,48 @@
 # MyLinux
 
+## 命令笔记
 
+查看包含“server”的进程
+```
+ps -aux | grep server
+```
 
-# 查看进程详细信息
-查看包含“server”的进程  
-ps -aux | grep server  
-查看包含“server”的id进程  
+查看包含“server”的id进程
+
+```
 ps -ef | grep server
-
-# 查看进程占用端口
-```
-netstat -nap | grep 20696
 ```
 
-# 创建文件夹
+查看进程占用端口
+
+```
+netstat -nap|grep 20696
+netstat -nap|grep mongod
+```
+创建文件夹
+
+```
 mkdir 文件名
+```
+
+杀掉进程
+
+```
+kill -9 pid
+```
+
+
+
+
+
+
+
+
+
+
 
 # Shell命令
+
 ## 学习网址
 - https://www.runoob.com/linux/linux-shell.html
 
@@ -43,6 +69,7 @@ chmod +x ./test.sh  #使脚本具有执行权限
 
 # Linux crontab 命令
 ## 
+
 ```
 crontab [ -u user ] { -l | -r | -e }
 ```
