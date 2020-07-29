@@ -35,5 +35,15 @@ tcpdump tcp -i eth0 port 5555 and src 113.65.228.241 -w ./target.cap
 nohup tcpdump -w ./target.cap &
 nohup tcpdump tcp -i eth0 port 5555 and src 113.65.228.241 -w ./target.cap &
 tcpdump tcp -i eth0 port 5555 and src 113.65.228.241 -w ./target.cap > ./t.cap &
+
+
+tcpdump tcp -i eth0 port 5555 -w ./xql_regu.cap &
+tcpdump tcp -i enp0s31f6 port 5573 -w ./xql_test.cap &
+
+ps -aux|grep tcpdump
+kill -9 进程id
+
+
+
 ```
 
