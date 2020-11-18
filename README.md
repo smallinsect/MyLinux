@@ -2,6 +2,14 @@
 
 ## 命令笔记
 
+查看占用端口
+
+```
+netstat -tunlp|grep server
+```
+
+
+
 ```
 查看包含“server”的进程
 ps -aux | grep server
