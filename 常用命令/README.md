@@ -51,6 +51,46 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
+## 文件夹改名
+
+### 文件夹名folderA改为folderB
+
+```
+mv folderA folderB
+```
+
+## 查看文件任意几行数据
+
+### 查看最后10行数据
+
+```
+cat filename | tail -n 10
+```
+
+### 查看10行到100行的数据
+
+```
+cat filename|head -n 10 | tail -n 100
+```
+
+### 最后10行
+
+```
+tail -n 10
+```
+
+### 文件第10行开始以后的内容
+
+```
+tail -n +10
+```
+
+### 前10行的内容
+
+```
+head -n 100
+```
+
 
 
 
